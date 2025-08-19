@@ -1,5 +1,5 @@
-def gitClone(String url, String branch){
-  echo "Clonning Code...."
-  git url: "${url}", branch: "${branch}"
-  echo "Cloning Successfull"
+def call(String url, String branch = "master") {
+    echo "Cloning code from ${url}, branch: ${branch}"
+    git url: url, branch: branch
+    echo "Cloning successful"
 }
