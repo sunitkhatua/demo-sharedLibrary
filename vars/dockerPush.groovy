@@ -1,4 +1,4 @@
-def dockerPush(String imageName, String imageTag, String dockerHubUserName) {
+def call(String imageName, String imageTag, String dockerHubUserName) {
     withCredentials([usernamePassword(credentialsId: "dockerHubCred", 
                                       passwordVariable: "dockerHubPass", 
                                       usernameVariable: "dockerHubUser")]) {
